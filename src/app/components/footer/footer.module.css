@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #33343a;
+    overflow: hidden;
+  }
+  
+  .left_end,
+  .right_end {
+    width: 50px;
+    height: 100%;
+    background-color: #33343a;
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .middle {
+    flex: 1;
+    height: 100%;
+    background-color: #33343a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    margin: 0 6vw;
+  }
+  
+  
