@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import styles from './form.module.css'
-import Image from 'next/image'
+import Button from '../button/button';
 
 interface FormProps {
     headerText: string
@@ -37,6 +37,7 @@ const Form: React.FC<FormProps> = ({ headerText, firstInputName, secondInputName
                     <input className={styles.input} type="text" placeholder={firstInputName} name="firstInput" value={firstInput} onChange={handleInputChange}/>
                     <h2 className={styles.password}>{secondInputName}</h2>
                     <input className={styles.input} type="text" placeholder={secondInputName} name="secondInput" value={secondInput} onChange={handleInputChange}/>
+                    <Button text={headerText} />
                 </div>
                 <div className={`${styles.box} ${styles.box_back}`}>
                     <h1 className={styles.header_text}>{headerText}</h1>
