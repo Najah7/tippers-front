@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect } from 'react';
 import styles from './form.module.css'
-import Button from '../button/button';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 interface FormProps {
     headerText: string
@@ -34,10 +35,10 @@ const Form: React.FC<FormProps> = ({ headerText, firstInputName, secondInputName
             <div className={styles.container}>
                 <div className={`${styles.box} ${styles.box_front}`}>
                     <h2 className={styles.email}>{firstInputName}</h2>
-                    <input className={styles.input} type="text" placeholder={firstInputName} name="firstInput" value={firstInput} onChange={handleInputChange}/>
+                    <TextField id="outlined-basic" sx={{width: '90%', margin: '10px auto 0px auto'}} label={firstInputName} variant="outlined" name="firstInput" value={firstInput} onChange={handleInputChange}  />
                     <h2 className={styles.password}>{secondInputName}</h2>
-                    <input className={styles.input} type="text" placeholder={secondInputName} name="secondInput" value={secondInput} onChange={handleInputChange}/>
-                    <Button text={headerText} />
+                    <TextField id="outlined-basic" sx={{width: '90%', margin: '10px auto 0px auto'}} label={secondInputName} variant="outlined" name="secondInput" value={secondInput} onChange={handleInputChange} />
+                    <Button sx={{backgroundColor: '#a083bb', '&:hover': {backgroundColor: '#a083bb'}, borderRadius: '50px',}} variant="contained">{headerText}</Button>
                 </div>
                 <div className={`${styles.box} ${styles.box_back}`}>
                     <h1 className={styles.header_text}>{headerText}</h1>
