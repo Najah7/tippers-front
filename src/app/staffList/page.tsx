@@ -1,18 +1,8 @@
 'use client'
 import { FC } from 'react';
-import styles from './staffList.module.css';
-import useSWR from 'swr';
-import fetcher from '../utils/fetcher';
+// import useSWR from 'swr';
+// import fetcher from '../utils/fetcher';
 import { Avatar, Button, List, ListItem, ListItemAvatar,ListItemText} from '@mui/material';
-
-interface User {
-  id: number;
-  name: string;
-  profileImage: string;
-  oneLineMessage: string;
-  isStudent: boolean;
-  periodOfWorkings: number;
-}
 
 const data = [
   {
@@ -38,6 +28,7 @@ const UsersListPage: FC = () => {
 
   // if (error) return <div>Error...</div>;
   // if (!data) return <div>Loading...</div>;
+  
   const date = new Date();
   const month = date.getMonth()+1;
   const day = date.getDate();
@@ -45,15 +36,6 @@ const UsersListPage: FC = () => {
   return (
     <div className="test">
       <h1>staff {month}/{day}</h1>
-      {/* {data.map((user) => (
-        <div key={user.id}>
-          <img src={user.profileImage} alt={user.name} />
-          <h2>{user.name}</h2>
-          <p>{user.oneLineMessage}</p>
-          {user.isStudent && <p>学生です</p>}
-          <p>働いている期間：{user.periodOfWorkings} ヶ月</p>
-        </div>
-      ))} */}
       {data.map((staff,index) =>(
         <List key={index} component="nav" aria-label="mailbox folders">
           <ListItem sx={{backgroundColor:'#616367',borderRadius: '20px',}}>
