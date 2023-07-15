@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
-import styles from './searchBar.module.css'
+import styles from './search-bar.module.css'
 import Image from 'next/image'
 
 interface searchBarProps {

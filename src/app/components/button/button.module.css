@@ -11,6 +11,7 @@
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
     /* TODO(Najah): フォントを指定して */
+    opacity: 0.75;
 }
 
 .button:hover{
