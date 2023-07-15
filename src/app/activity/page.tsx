@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import DashBoard from '../components/dash-board/dash-board'
 import HistoryList from '../components/history-list/history-list'
 import DetailButton from '../components/detail-button/detail-button'
+import Footer from '../components/footer/footer'
 
 export default function Activity() {
   return (
@@ -11,6 +12,7 @@ export default function Activity() {
       <DashBoard month={7} ammountOfTips={500}/>
       <HistoryList amountOfDeal={3000}/>
       <DetailButton />
+      <Footer />
     </main>
   )
 }

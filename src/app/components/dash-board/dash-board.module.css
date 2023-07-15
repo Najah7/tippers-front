@@ -1,5 +1,5 @@
 .container {
-    height: 25vh;
+    height: 18vh;
     width: 95vw;
     border-radius: 20px;
     margin: 0 auto;
@@ -19,7 +19,7 @@
 
 .dashboard h2,
 .dashboard h3 {
-    margin: 1.5vh;
+    margin: 1vh;
     padding: 1px;
 }
 

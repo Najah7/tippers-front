@@ -6,7 +6,7 @@ import styles from './detail-button.module.css';
 
 const DetailButton: React.FC = (): JSX.Element => {
   return (
-    <Button sx={{backgroundColor: '#565656', '&:hover': {backgroundColor: '#565656'}, borderRadius: '50px', width: '50%', height: '10%', margin: "2vh auto 0 auto"}} variant="contained">もっと見る</Button>
+    <Button sx={{backgroundColor: '#565656', '&:hover': {backgroundColor: '#565656'}, borderRadius: '50px', width: '50%', height: '10%', margin: "0.2vh auto 1vh auto"}} variant="contained">もっと見る</Button>
   );
 };
 
