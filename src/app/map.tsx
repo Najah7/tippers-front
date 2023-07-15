@@ -6,10 +6,14 @@ const containerStyle = {
   height: "70vh",
 };
 
-const defaultCenter = {
-  lat: 34.0522, lng: -118.2437 // これはLos Angelesの座標です
+const test = {
+  borderRadius: '50px'
 };
 
+const defaultCenter = {
+  lat: 0, lng: 0 
+};
+ console.log()
 const Map = () => {
   const [currentPosition, setCurrentPosition] = useState<google.maps.LatLngLiteral | null>(null);
   const [selected, setSelected] = useState<google.maps.LatLngLiteral | null>(null);
@@ -28,7 +32,7 @@ const Map = () => {
 
   return (
     <div className="">
-      <LoadScript googleMapsApiKey="AIzaSyCIZaNTMguDQhAvVsGQZ2itWieKndoUj0E">
+      <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={currentPosition ? currentPosition : defaultCenter}
