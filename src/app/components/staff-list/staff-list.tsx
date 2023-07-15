@@ -21,7 +21,11 @@ const data = [
   {
     avatar: "???",
     name: "staff4",
-  }
+  },
+  {
+    avatar: "???",
+    name: "staff5",
+  },
 ]
 
 const StaffList: FC = () => {

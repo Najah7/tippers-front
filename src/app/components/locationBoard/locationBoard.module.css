@@ -6,7 +6,8 @@
     align-items: center;
     background-color: #47484d;
     border-radius: 20px;
-    margin-top: 15vh;
+    width: 95vw;
+    margin: 5vh auto 0 auto;
 }
 
 .icon {
