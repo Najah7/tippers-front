@@ -25,11 +25,11 @@
   }
   
   .box_back {
-    background-color: #616367;
+    background-color: #81848e;
     z-index: 1; /* 後方のボックスを奥に表示 */
     bottom: 50px; /* 白いボックスが上にはみ出る量 */
     border-radius: 15% 15% 0 0; /* 丸くなるように角を丸める */
-    border: 1px solid #616367;
+    border: 1px solid ##81848e;
   }
 
   .header_text {
