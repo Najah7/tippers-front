@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #47484d;
+    border-radius: 20px;
+}
+
+.icon {
+    margin: 20px;
+}
+
+.location {
+    display: flex;
+    color: whitesmoke;
+}
+
+.location p {
+    margin: auto 0 auto 20px;
+}
