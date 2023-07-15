@@ -1,0 +1,19 @@
+.button{
+    width: 70vw;
+    height: 13vh;
+    background-color: #c083ff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    /* TODO(Najah): フォントを指定して */
+}
+
+.button:hover{
+    background-color: #f7ec7c;
+    /* color: #fff; */
+}
