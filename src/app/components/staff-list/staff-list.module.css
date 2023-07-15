@@ -1,0 +1,8 @@
+.container{
+    margin-top: 50px;
+}
+
+.container li {
+    width: 95%;
+    margin: 0 auto;
+}

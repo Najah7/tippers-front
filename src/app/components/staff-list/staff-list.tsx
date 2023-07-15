@@ -3,6 +3,7 @@ import { FC } from 'react';
 // import useSWR from 'swr';
 // import fetcher from '../utils/fetcher';
 import { Avatar, Button, List, ListItem, ListItemAvatar,ListItemText} from '@mui/material';
+import styles from './staff-list.module.css';
 
 const data = [
   {
@@ -23,7 +24,7 @@ const data = [
   }
 ]
 
-const UsersListPage: FC = () => {
+const StaffList: FC = () => {
   // const { data, error } = useSWR<User[]>('/api/users', fetcher);
 
   // if (error) return <div>Error...</div>;
@@ -34,8 +35,7 @@ const UsersListPage: FC = () => {
   const day = date.getDate();
 
   return (
-    <div className="test">
-      <h1>staff {month}/{day}</h1>
+    <div className={styles.container}>
       {data.map((staff,index) =>(
         <List key={index} component="nav" aria-label="mailbox folders">
           <ListItem sx={{backgroundColor:'#616367',borderRadius: '20px',}}>
@@ -51,4 +51,4 @@ const UsersListPage: FC = () => {
   );
 };
 
-export default UsersListPage;
+export default StaffList;
