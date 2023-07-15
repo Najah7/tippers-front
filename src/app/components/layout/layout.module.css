@@ -6,14 +6,18 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    position: relative;
   }
   
   .right_angle_triangle {
     width: 100%;
-    height: 25%;
+    height: 200px;
     margin-top: auto;
-    border-top: 20vh solid transparent; /* 左側の辺 */
+    border-top: 25vw solid transparent; /* 左側の辺 */
     border-left: 100vw solid #2c2b32; /* 底辺 */
+    position: absolute;
+    top: 60vh;
+    z-index: -1;
   }
   
   
