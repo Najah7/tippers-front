@@ -1,0 +1,66 @@
+.outer {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: relative;
+    width: 60vw;
+    height: 200px;
+  }
+  
+  .box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box_front {
+    background-color: white;
+    z-index: 2; /* 前方のボックスを手前に表示 */
+    border-radius: 15%; /* 丸くなるように角を丸める */
+    border: 1px solid #616367;
+  }
+  
+  .box_back {
+    background-color: #81848e;
+    z-index: 1; /* 後方のボックスを奥に表示 */
+    bottom: 50px; /* 白いボックスが上にはみ出る量 */
+    border-radius: 15% 15% 0 0; /* 丸くなるように角を丸める */
+    border: 1px solid ##81848e;
+  }
+
+  .header_text {
+    margin: 0.4rem 0 0 0;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .email,
+  .password {
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .input{
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    width: 80%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #616367;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .container {
+      width: 400px;
+      height: 200px;
+    }
+  }
