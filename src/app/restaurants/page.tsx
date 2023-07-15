@@ -2,6 +2,8 @@ import SearchBar from '../components/search-bar/search-bar'
 import RestaurantCard from '../components/restaurant-card/restaurant-card';
 import styles from './page.module.css'
 import Button from '../components/button/button'
+import Footer from '../components/footer/footer';
+import DetailButton from '../components/detail-button/detail-button';
 
 type restaurant = {
     name: string,
@@ -68,7 +70,8 @@ export default function Restaurants() {
                     />
                 ))}
         </div>
-        <Button text="もっと見る" />
+        <DetailButton />
+        <Footer />
     </main>
   )
 }

@@ -5,12 +5,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: #33343a;
-    margin-top: 2vh;
 }
 
-.header h1 {
-    color: #fff;
-    font-size: 2.5rem;
+.header img {
+    margin: 0 auto;
 }
 
 .header div {
@@ -20,10 +18,14 @@
 .menu_bar{
     float: right;
     margin-left: 0.5rem;
+    /* NOTE:いったん、アイコンは表示しない👇 */
+    display: none;
 }
 
 
 .notification {
     float: left;
     margin-right: 0.5rem;
+    /* NOTE:いったん、アイコンは表示しない👇 */
+    display: none;
 }
