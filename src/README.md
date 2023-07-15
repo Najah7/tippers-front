@@ -2,14 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
+プロジェクトの起動
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+docker compose up
+```
+
+新しいパッケージを導入した場合は以下のコマンドからプロジェクトを実行してください
+```bash
+docker compose up --build
+```
+
+JSXのエラーが出た場合は下記コマンドをローカルで実行してみてください
+```bash
+npm install
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
