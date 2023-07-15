@@ -1,0 +1,21 @@
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: #33343a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .right_angle_triangle {
+    width: 100%;
+    height: 25%;
+    margin-top: auto;
+    border-top: 20vh solid transparent; /* 左側の辺 */
+    border-left: 100vw solid #2c2b32; /* 底辺 */
+  }
+  
+  
+
+  
