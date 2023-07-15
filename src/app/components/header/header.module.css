@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33343a;
+    margin-top: 2vh;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.header div {
+    margin: 2rem 0;
+}
+
+.menu_bar{
+    float: right;
+    margin-left: 0.5rem;
+}
+
+
+.notification {
+    float: left;
+    margin-right: 0.5rem;
+}
