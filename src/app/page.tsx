@@ -2,12 +2,12 @@
 import Image from 'next/image'
 import Button from './components/button/button'
 import styles from './home.module.css'
-import { useRouter, NextRouter} from 'next/navigation'
+import { useRouter} from 'next/navigation'
 
 
 export default function Home() {
   
-  const router: NextRouter = useRouter()
+  const router = useRouter()
 
   return (
     <main>

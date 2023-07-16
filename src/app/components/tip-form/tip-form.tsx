@@ -5,8 +5,10 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating';
 import Modal from '@mui/material/Modal';
+import { useRouter } from 'next/navigation';
 
 const TipForm: React.FC = () => {
+  const router = useRouter();
   const [rating, setRating] = React.useState<number | null>(2);
   const [ammountOfTips, setAmmountOfTips] = React.useState('');
 
@@ -37,6 +39,10 @@ const TipForm: React.FC = () => {
     console.log('Tipボタンがクリックされました');
     console.log('Tip額：', ammountOfTips);
     console.log('評価：', rating);
+
+    setTimeout(() => {
+      router.push('/waiters');  // ページ遷移処理を3秒遅延させる
+    }, 3000);
   };
 
   return (
