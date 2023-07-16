@@ -4,6 +4,7 @@ import { FC } from 'react';
 // import fetcher from '../utils/fetcher';
 import { Avatar, Button, List, ListItem, ListItemAvatar,ListItemText} from '@mui/material';
 import styles from './staff-list.module.css';
+import { useRouter } from 'next/navigation';
 
 const data = [
   {
@@ -33,6 +34,7 @@ const StaffList: FC = () => {
 
   // if (error) return <div>Error...</div>;
   // if (!data) return <div>Loading...</div>;
+  const router = useRouter();
   
   const date = new Date();
   const month = date.getMonth()+1;
@@ -47,7 +49,7 @@ const StaffList: FC = () => {
             <Avatar alt="Travis Howard" src="" />
           </ListItemAvatar>
           <ListItemText style={{ color: "white" }} primary={staff.name} />
-          <Button sx={{backgroundColor: '#a083bb','&:hover': {backgroundColor: '#a083bb'},borderRadius: '50px',}} variant="contained">チップを渡す</Button>
+          <Button onClick={() => router.push('/send-tip')} sx={{backgroundColor: '#a083bb','&:hover': {backgroundColor: '#a083bb'},borderRadius: '50px',}} variant="contained">チップを渡す</Button>
         </ListItem>
         </List>
       ))} 
