@@ -6,8 +6,10 @@
     width: 95vw;
     height: 10vh;
     margin: 0 auto;
+    color: white;
+    font-size: 1.5rem;
 }
 
-.container h2{
-    margin: 0 auto;
+.container span {
+    font-size: 1.8rem;
 }
