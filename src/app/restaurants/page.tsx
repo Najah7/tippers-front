@@ -1,9 +1,11 @@
+'use client'
 import SearchBar from '../components/search-bar/search-bar'
 import RestaurantCard from '../components/restaurant-card/restaurant-card';
 import styles from './page.module.css'
 import Button from '../components/button/button'
 import Footer from '../components/footer/footer';
 import DetailButton from '../components/detail-button/detail-button';
+import { useRouter } from 'next/navigation'
 
 type restaurant = {
     name: string,
@@ -49,29 +51,32 @@ const data: restaurant[] = [
     }
 ]
 
-
-
-
 export default function Restaurants() {
-
+    const router = useRouter();
     
-  return (
-    <main className={styles.container}>
-        <SearchBar />
-        <div className={styles.list}>
-            {data.map((restaurant) => (
+    const handleCardClick = (restaurantName: string) => {
+        router.push(`/waiters`);
+    }
+    
+    return (
+        <main className={styles.container}>
+            <SearchBar />
+            <div className={styles.list}>
+                {data.map((restaurant, index) => (
                     <RestaurantCard
+                        key={index}
                         name={restaurant.name}
                         address={restaurant.address}
                         open={restaurant.open}
                         close={restaurant.close}
                         numOfEmployee={restaurant.numOfEmployee}
                         imageUrl={restaurant.imageUrl}
+                        onClick={() => handleCardClick(restaurant.name)} 
                     />
                 ))}
-        </div>
-        <DetailButton />
-        <Footer />
-    </main>
-  )
+            </div>
+            {/* <DetailButton onClick={handleButtonClick} /> */}
+            <Footer />
+        </main>
+    )
 }
