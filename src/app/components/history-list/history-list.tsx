@@ -48,7 +48,7 @@ const HistoryList: React.FC<HistoryListProps> = (): JSX.Element => {
           <ListItemAvatar>
             <Avatar alt="Travis Howard" src="" />
           </ListItemAvatar>
-          <ListItemText style={{ color: "white" }} primary={staff.name} />
+          <ListItemText primary={staff.name} />
           <h2 className={styles.ammount}>￥{staff.ammountOfDeal}</h2>
         </ListItem>
         </List>
