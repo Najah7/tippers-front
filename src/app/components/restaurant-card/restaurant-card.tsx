@@ -10,11 +10,12 @@ interface RestaurantCardProps {
     close: string
     numOfEmployee: number
     imageUrl?: string
+    onClick?: ()=> void
 }
 
-const RestaurantCard: React.FC<RestaurantCardProps> = ({ name, address, open, close, numOfEmployee, imageUrl }: RestaurantCardProps) => {
+const RestaurantCard: React.FC<RestaurantCardProps> = ({ name, address, open, close, numOfEmployee, imageUrl, onClick }: RestaurantCardProps) => {
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={onClick}>
             <Image src={imageUrl? imageUrl: "/sample/others/question-mark.jpg"} alt="restaurant" width={80} height={80} />
             <h2>{name}</h2>
             <h3>{address}</h3>

@@ -2,12 +2,12 @@
 import Image from 'next/image'
 import Button from '../components/button/button'
 import styles from './page.module.css'
-import { useRouter, NextRouter} from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 
 export default function Tippers() {
   
-  const router: NextRouter = useRouter()
+  const router = useRouter()
 
   return (
     <main>

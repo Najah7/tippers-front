@@ -7,7 +7,7 @@ export default function LogIn() {
   return (
     <main className={styles.container}>
       <Image src="/tippers-logo.png" alt="tippers" width={270} height={100} />
-      <Form headerText='Log In' firstInputName='Email' secondInputName='Password' />
+      <Form headerText='Log In' firstInputName='Email' secondInputName='Password' redirectUrl='/restaurants' />
     </main>
   )
 }
