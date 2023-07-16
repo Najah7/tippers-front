@@ -4,6 +4,7 @@ import styles from '../form/form.module.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating';
+import Modal from '@mui/material/Modal';
 
 const TipForm: React.FC = () => {
   const [rating, setRating] = React.useState<number | null>(2);
@@ -24,8 +25,13 @@ const TipForm: React.FC = () => {
     }
   };
 
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
+
   const handleButtonClick = () => {
     // ここにボタンをクリックしたときの処理を記述する（例：APIへのリクエストなど）
+    handleOpen();
 
     // FOR DEBUG👇
     console.log('Tipボタンがクリックされました');
@@ -70,6 +76,29 @@ const TipForm: React.FC = () => {
           >
             Giving tip
           </Button>
+
+          <Modal
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              backgroundColor: 'rgba(197,190,108, 0.7)',
+              color: 'white',
+              position: 'absolute',
+            }}
+            open={open}
+            // NOTE(Najah):リダイレクトする予定なので、Closeボタンは不要と思ったのでコメントアウト
+            // onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <>
+              <h1 style={{fontSize: '1.5rem'}}>Thank you for your tip！</h1>
+              <h2>Tip額：{ammountOfTips}</h2>
+              <h2>評価：{rating}</h2>
+            </>
+          </Modal>
         </div>
         <div className={`${styles.box} ${styles.box_back}`}>
           <h1 className={styles.header_text}>Tipを渡す</h1>
