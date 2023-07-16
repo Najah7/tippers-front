@@ -1,8 +1,14 @@
+'use client'
 import Image from 'next/image'
 import Button from '../components/button/button'
 import styles from './page.module.css'
+import { useRouter, NextRouter} from 'next/navigation'
+
 
 export default function Tippers() {
+  
+  const router: NextRouter = useRouter()
+
   return (
     <main>
       <div>
@@ -12,8 +18,8 @@ export default function Tippers() {
             <h2>By giving tips</h2>
         </div>
         <div className={styles.buttons}>
-            <Button text="Log in" />
-            <Button text="Sign up" />
+          <Button text="Log in" onClick={()=>router.push('/login')}/>
+          <Button text="Sign up" onClick={()=>router.push('/signup')}/>
         </div>
       </div>
     </main>

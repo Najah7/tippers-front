@@ -4,11 +4,12 @@ import Image from 'next/image'
 
 interface ButtonProps {
     text: string
+    onClick?: ()=> void
 }
 
-const Button: React.FC<ButtonProps> = ({ text }): JSX.Element => {
+const Button: React.FC<ButtonProps> = ({ text, onClick }): JSX.Element => {
     return (
-        <button className={styles.button}>{text}</button>
+        <button className={styles.button} onClick={onClick}>{text}</button>
     )
 }
 
